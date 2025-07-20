@@ -1,2 +1,2 @@
-# NBA-DPOY_PREDICT_MOD
+# NBA-DPOY-Prediction-Model
 NBA DPOY prediction 
