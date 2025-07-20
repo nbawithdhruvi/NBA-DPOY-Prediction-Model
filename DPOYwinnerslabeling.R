@@ -73,8 +73,6 @@ team_all_data <- map_dfr(years, function(yr) {
   }
 })
 
-# Optional: standardize Team names here if needed to match player dataset (e.g., abbreviations or full names)
-
 # Save cleaned combined datasets
 write_csv(player_clean, "all_defensive_data.csv")
 write_csv(team_all_data, "team_defensive_stats_combined.csv")
