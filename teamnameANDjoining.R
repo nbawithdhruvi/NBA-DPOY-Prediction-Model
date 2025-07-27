@@ -66,8 +66,7 @@ team_data <- team_data %>%
       Team == "New York Knicks" ~ "NYK",
       Team == "Toronto Raptors" ~ "TOR",
       Team == "Houston Rockets" ~ "HOU",
-      Team == "Charlotte Hornets" & season < 2002 ~ "CHH",
-      Team == "Charlotte Hornets" & season >= 2015 ~ "CHA",
+      Team == "Charlotte Hornets" ~ "CHA",
       Team == "Charlotte Bobcats" ~ "CHA",
       Team == "Oklahoma City Thunder" ~ "OKC",
       Team == "Seattle SuperSonics" ~ "OKC",
@@ -80,7 +79,7 @@ team_data <- team_data %>%
       Team == "Milwaukee Bucks" ~ "MIL",
       Team == "Atlanta Hawks" ~ "ATL",
       Team == "Washington Wizards" ~ "WAS",
-      Team == "New Orleans Hornets" & season <= 2013 ~ "NOP",
+      Team == "New Orleans Hornets" ~ "NOH",
       Team == "New Orleans Pelicans" ~ "NOP",
       Team == "New Orleans/Oklahoma City Hornets" ~ "NOP",
       Team == "Sacramento Kings" ~ "SAC",
@@ -90,7 +89,7 @@ team_data <- team_data %>%
       Team == "New Jersey Nets" ~ "BKN",
       Team == "Chicago Bulls" ~ "CHI",
       Team == "Orlando Magic" ~ "ORL",
-      Team == "Vancouver Grizzlies" ~ "MEM",
+      Team == "Vancouver Grizzlies" ~ "VAN",
       Team == "Memphis Grizzlies" ~ "MEM",
       TRUE ~ Team
     )
