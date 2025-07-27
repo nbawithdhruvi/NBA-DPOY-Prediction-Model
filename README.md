@@ -21,9 +21,11 @@ I processed 23 seasons’ worth of data (2000–2022). I also had to handle name
 Then I manually labeled each season’s DPOY winner so the model could learn what patterns might lead to an actual award.
 
  2. Combining Player & Team Stats
+    
 I merged all the cleaned data into a single dataset that included both individual defensive performance and team defensive context. This allows the model to consider not just how well a player defends, but also how good their team was defensively that season.
 
- 4. Training the Model
+ 3. Training the Model
+    
 I trained a logistic regression model using a mix of:
 Traditional box score stats: Games (G), Minutes (MP), Blocks (BLK), Steals (STL), Rebounds (TRB)
 
@@ -35,6 +37,7 @@ Team stats such as opponents' field goal percentage
 The model outputs a probability for each player-season combo, which I then normalized within each season to rank the top candidates by predicted DPOY likelihood.
 
 4. Results & Accuracy
+   
 So far, the model is doing reasonably well:
 It correctly predicted 13 out of 23 DPOY winners when trained on all seasons from 2000 to 2022.
 
@@ -43,6 +46,7 @@ That’s just over a 56.5% accuracy, which is pretty solid for an award that fac
 However, I have noticed that accuracy drops significantly when I try to train the model on early seasons and predict the later ones.
 
 Why the Accuracy Drops: Award Criteria May Have Shifted
+
 One interesting insight is that the criteria for DPOY appear to have evolved over time.
 In the early 2000s, the winners were almost exclusively big men, such as Ben Wallace, Dwight Howard, or Marcus Camby. These guys racked up blocks and dominated the paint.
 But more recently, the award has shifted:
